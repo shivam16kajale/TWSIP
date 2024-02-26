@@ -1,0 +1,300 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #add8e69b;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: #add8e61f;
+    border-radius: 40%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+}
+
+#nav {
+    height: 145px;
+    width: 100%;
+    /* background-color:red; */
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 45px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+}
+
+#nav img {
+    height: 120px;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 400px;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: #00000092;
+}
+
+#page1 {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 80px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "Performance. Power. Precision";
+    position: absolute;
+    color: #0000004d;
+    top: -3px;
+    left: -3px;
+    -webkit-text-stroke: 1px #add8e6a1;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 15px;
+    font-weight: 600;
+    width: 40%;
+}
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: transparent;
+    -webkit-text-stroke: 1px #36c1cb2d;
+
+}
+
+#scroller-in h4:hover {
+    color: #46a0b2;
+    -webkit-text-stroke: transparent;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+   
+    height: 40vh;
+    width: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+
+}
+
+#about-us img{
+
+    height: 230px;
+    width: 230px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    width: 40%;
+    text-align: center;
+}
+
+#about-us-in h3{
+
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #add8e6;
+    
+}
+
+#about-us-in p{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#card-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    position: relative;
+    z-index: 10;
+    
+}
+.card{
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+#card1{
+    background-image: url(carreview.jpeg);
+    
+}
+
+
+#card2{
+    background-image: url(toppicks.jpg);
+}
+
+
+#card3{
+    background-image: url(carbrands.jpg);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #46a0b2;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 400;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform:rotate3d(-1,1,0,20deg);
+}
+#road-div{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 10;
+}
+
+#road-div h4{
+    width: 50%;
+    font-size: 35px;
+    color: grey;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
